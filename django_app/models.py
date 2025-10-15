@@ -72,7 +72,7 @@ class Materials(models.Model):
         verbose_name_plural = 'Материалы'
     
     def __str__(self):
-        return self.name
+        return self.name 
 
 class Teams(models.Model):
     employee = models.ForeignKey(Employees, on_delete=models.CASCADE, verbose_name='Сотрудник')

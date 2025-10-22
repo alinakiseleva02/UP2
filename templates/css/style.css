@@ -1,0 +1,308 @@
+/* Сброс стандартных стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Стили для шапки */
+.header {
+    width: 100%;
+    height: 119px;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header__container {
+    max-width: 1280px; /* Максимальная ширина контейнера */
+    height: 100%; /* Наследуем высоту от header */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 0 106px; /* Отступы слева и справа */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Лого слева, иконка справа */
+}
+
+/* Стили для логотипа */
+.header__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; 
+    width: auto; 
+    max-width: 200px; /* Ограничиваем максимальную ширину */
+}
+
+/* Стили для иконки */
+.header__icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icon {
+    height: 24px; /* Размер иконки */
+    width: 24px; /* Размер иконки */
+    transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на иконку */
+.icon:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+/* 2 фрей*/
+.main-frame {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.frame-container {
+    width: 1280px;
+    height: 721px;
+    padding: 0 106px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Фоновая картинка */
+.frame-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Затемнение */
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+/* Контент поверх затемнения */
+.frame-content {
+    position: absolute;
+    top: 0;
+    left: 106px;
+    right: 106px;
+    bottom: 0;
+    padding: 80px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Главный заголовок */
+.main-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    max-width: 700px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Описание */
+.main-description {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 80px;
+    max-width: 650px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+    opacity: 0.95;
+}
+
+/* Блоки с информацией */
+.info-blocks {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.info-block {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.info-block:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgb(121, 74, 74);
+}
+
+/* Заголовок блока */
+.block-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.block-icon {
+    font-size: 24px;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.block-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.block-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+/* 3 фрейм */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
+}
+
+/* Секция "Наша история" */
+.history-section {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+
+.history-container {
+    width: 1280px;
+    height: 682px;
+    padding: 0 97px; /* Отступы по бокам */
+    display: flex;
+    align-items: center;
+    gap: 92px; /* Расстояние между картинкой и блоком */
+    background: white; /* Белый фон фрейма */
+}
+
+/* Левая часть - изображение */
+.history-image {
+    width: 489px;
+    height: 612px;
+    flex-shrink: 0;
+}
+
+.history-image .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Правая часть - текстовый блок */
+.history-content {
+    width: 489px;
+    height: 612px;
+    flex-shrink: 0;
+    background: #A99F95; /* Цвет из задания */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+}
+
+.content-block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Заголовок секции */
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ffffff;
+    margin-top: 15px;
+}
+
+/* Текстовый контент */
+.text-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.history-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #ffffff;
+    text-align: left;
+    margin: 0;
+}

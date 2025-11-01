@@ -10,7 +10,7 @@
     background-color: #ffffff;
     width: 100%;
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(219, 215, 215, 0.1);
     position: relative;
 }
 
@@ -95,7 +95,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -104,7 +104,7 @@
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(255, 253, 253, 0.5);
 }
 
 .main-description {
@@ -114,7 +114,7 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .info-blocks {
@@ -445,3 +445,203 @@ li:before {
     background: #d4b896;
     border-radius: 50%;
 }
+
+
+
+
+
+
+
+
+/* 5 фрейм */
+
+.gray-container {
+    background: #808080;
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.text-content {
+    flex: 1;
+    color: white;
+}
+
+.main-text {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.orange-button {
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 20px 35px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+    min-width: 180px;
+    white-space: nowrap;
+}
+
+.orange-button:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.5);
+}
+
+.orange-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(255, 107, 53, 0.4);
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .gray-container {
+        padding: 25px 20px;
+    }
+    
+    .main-text {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .orange-button {
+        padding: 16px 25px;
+        font-size: 15px;
+        min-width: 140px;
+    }
+    
+    .content-wrapper {
+        gap: 25px;
+    }
+}
+
+
+
+
+/* 6 фрейм */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 42px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.service-card:hover .service-image::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    filter: brightness(0.9);
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+    filter: brightness(0.95);
+}
+
+.service-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-content h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.service-content p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+
